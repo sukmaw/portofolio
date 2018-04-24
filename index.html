@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Portofolio</title>
+	
+	<link rel="stylesheet" href="assets/materialize/css/materialize.min.css">
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/typewriter.js"></script>
+	<script src="assets/materialize/js/materialize.min.js"></script>
+</head>
+<style>
+.carousel-item img {
+	height : 100%;
+}
+.skillbar {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.skillbar-bar:before {
+    background: #eee;
+    content: "";
+    height: 3px;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.skillbar-bar {
+    height: 3px;
+    width: 0px;
+    background: #323232;
+    transition-property: width, background-color;
+}
+
+.skillbar-title {
+    color: #323232;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.skill-bar-percent {
+    float: right;
+    display: inline-block;
+    color: #323232;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+</style>
+<body>
+	<nav class="grey darken-2">
+		<div class="nav-wrapper">
+			<a href="javascript:;" class="brand-logo hide-on-med-and-down">Logo</a>
+			<ul class="right">
+				<li><a href="javascript:;">About</a></li>
+				<li><a href="javascript:;">About</a></li>
+				<li><a href="javascript:;">About</a></li>
+			</ul>
+		</div>
+	</nav>
+	
+	<div class="carousel carousel-slider">
+		<a class="carousel-item" href="#one!"><img src="assets/images/bg1.png"></a>
+		<div style="bottom : 285px;" class="carousel-fixed-item center">
+			<h4 class="white-text">Be The Best You Can Be</h4>
+			<h5 class="white-text" id="profile"></h5>
+		</div>
+		<div class="carousel-fixed-item center">
+			<a href="javascript:;" class="btn waves-effect waves-light">Download CV</a>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="container">
+		<div style="padding : 10px" class="row hoverable">
+			<blockquote class="col s12">
+				<h2>About Me</h2>
+			</blockquote>
+			<h6 class="col s12 center">
+				Siswa SMK Jurusan RPL, hobi koding. Saya senang belajar hal hal baru khususnya di dunia web, tapi tidak menutup kemungkinan untuk mendalami dunia mobile juga
+			</h6>
+		</div>
+		<div class="row hoverable">
+			<blockquote class="col s12">
+				<h2>Skills</h2>
+			</blockquote>
+			<div class="col s12">
+				<div class="skillbar" data-percent="55%">
+					<div class="skillbar-title">Web design</div>
+					<div class="skill-bar-percent">55%</div>
+					<div class="skillbar-bar" style="width: 55%;"></div>
+				</div>
+				<div class="skillbar" data-percent="80%">
+					<div class="skillbar-title">development</div>
+					<div class="skill-bar-percent">80%</div>
+					<div class="skillbar-bar" style="width: 80%;"></div>
+				</div>
+				<div class="skillbar" data-percent="40%">
+					<div class="skillbar-title">Photography</div>
+					<div class="skill-bar-percent">40%</div>
+					<div class="skillbar-bar" style="width: 40%;"></div>
+				</div>
+				<div class="skillbar" data-percent="70%">
+					<div class="skillbar-title">branding</div>
+					<div class="skill-bar-percent">70%</div>
+					<div class="skillbar-bar" style="width: 70%;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		$(document).ready(function(){
+			$('.carousel').carousel({
+				fullWidth : true,
+			});
+			var app = document.getElementById('profile');
+
+			var typewriter = new Typewriter(app, {
+				loop: true
+			});
+
+			typewriter.typeString('Hai, My Name Is Luthfi!')
+				.pauseFor(1000)
+				.deleteAll()
+				.typeString('I want to be a back-end developer')
+				.pauseFor(1000)
+				.deleteAll()
+				.typeString('WELCOME!')
+				.pauseFor(3000)
+				.start();
+		});
+	</script>
+</body>
+</html>
