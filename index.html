@@ -5,6 +5,7 @@
 	<title>Portofolio</title>
 	
 	<link rel="stylesheet" href="assets/materialize/css/materialize.min.css">
+	<link rel="stylesheet" href="assets/materialize/css/material-icons.css">
 	<script src="assets/js/jquery.js"></script>
 	<script src="assets/js/typewriter.js"></script>
 	<script src="assets/materialize/js/materialize.min.js"></script>
@@ -52,8 +53,11 @@
     font-weight: 600;
     text-transform: uppercase;
 }
+.card-image{
+	height : 200px;
+}
 </style>
-<body>
+<body class="grey lighten-1">
 	<nav class="grey darken-2">
 		<div class="nav-wrapper">
 			<a href="javascript:;" class="brand-logo hide-on-med-and-down">Logo</a>
@@ -66,8 +70,8 @@
 	</nav>
 	
 	<div class="carousel carousel-slider">
-		<a class="carousel-item" href="#one!"><img src="assets/images/bg1.png"></a>
-		<div style="bottom : 285px;" class="carousel-fixed-item center">
+		<a class="carousel-item" href="javascript:;"><img src="assets/images/bg1.png"></a>
+		<div id="typewriter" class="carousel-fixed-item center">
 			<h4 class="white-text">Be The Best You Can Be</h4>
 			<h5 class="white-text" id="profile"></h5>
 		</div>
@@ -78,7 +82,7 @@
 	<br>
 	<br>
 	<div class="container">
-		<div style="padding : 10px" class="row hoverable">
+		<div style="padding : 20px" class="row hoverable">
 			<blockquote class="col s12">
 				<h2>About Me</h2>
 			</blockquote>
@@ -86,37 +90,159 @@
 				Siswa SMK Jurusan RPL, hobi koding. Saya senang belajar hal hal baru khususnya di dunia web, tapi tidak menutup kemungkinan untuk mendalami dunia mobile juga
 			</h6>
 		</div>
-		<div class="row hoverable">
+		<div style="padding : 20px" class="row hoverable">
 			<blockquote class="col s12">
 				<h2>Skills</h2>
 			</blockquote>
 			<div class="col s12">
-				<div class="skillbar" data-percent="55%">
-					<div class="skillbar-title">Web design</div>
-					<div class="skill-bar-percent">55%</div>
-					<div class="skillbar-bar" style="width: 55%;"></div>
+				<div class="skillbar" data-percent="85%">
+					<div class="skillbar-title">PHP</div>
+					<div class="skill-bar-percent">85%</div>
+					<div class="skillbar-bar" style="width: 85%;"></div>
 				</div>
-				<div class="skillbar" data-percent="80%">
-					<div class="skillbar-title">development</div>
-					<div class="skill-bar-percent">80%</div>
-					<div class="skillbar-bar" style="width: 80%;"></div>
+				<div class="skillbar" data-percent="82%">
+					<div class="skillbar-title">Laravel</div>
+					<div class="skill-bar-percent">82%</div>
+					<div class="skillbar-bar" style="width: 82%;"></div>
 				</div>
-				<div class="skillbar" data-percent="40%">
-					<div class="skillbar-title">Photography</div>
-					<div class="skill-bar-percent">40%</div>
-					<div class="skillbar-bar" style="width: 40%;"></div>
+				<div class="skillbar" data-percent="79%">
+					<div class="skillbar-title">CodeIgniter</div>
+					<div class="skill-bar-percent">79%</div>
+					<div class="skillbar-bar" style="width: 79%;"></div>
 				</div>
-				<div class="skillbar" data-percent="70%">
-					<div class="skillbar-title">branding</div>
-					<div class="skill-bar-percent">70%</div>
-					<div class="skillbar-bar" style="width: 70%;"></div>
+				<div class="skillbar" data-percent="75%">
+					<div class="skillbar-title">Materializecss</div>
+					<div class="skill-bar-percent">75%</div>
+					<div class="skillbar-bar" style="width: 75%;"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row hoverable">
+			<blockquote class="col s12">
+				<h2>Portofolio</h2>
+			</blockquote>
+			<div class="row">			
+				<div class="card col m5 s12 hoverable">
+					<div class="card-image waves-effect waves-block waves-light">
+					  <a href="assets/images/absensi.png" target="_blank"><img src="assets/images/absensi.png"></a>
+					</div>
+					<div class="card-content">
+					  <span class="card-title activator grey-text text-darken-4">Absensi<i class="material-icons right">more_vert</i></span>
+					  <p><a href="https://sistem-absensi.000webhostapp.com/" target="_blank">Check the website</a></p>
+					</div>
+					<div class="card-reveal">
+					  <span class="card-title grey-text text-darken-4">Sistem Absensi<i class="material-icons right">close</i></span>
+					  <p>Sistem absensi ini dibangun menggunakan framework laravel dengan custom user authentication yang bisa membuat role sesuai super admin / pemegang porgram.</p>
+					</div>
+				</div>
+				<div class="col m2"></div>
+				<div  class="card col m5 s12 hoverable">
+					<div class="card-image waves-effect waves-block waves-light">
+					  <a href="assets/images/hotel.png" target="_blank"><img src="assets/images/hotel.png"></a>
+					</div>
+					<div class="card-content">
+					  <span class="card-title activator grey-text text-darken-4">Hotel<i class="material-icons right">more_vert</i></span>
+					  <p><a href="https://hotel-qu-boss.000webhostapp.com/" target="_blank">Check the website</a></p>
+					</div>
+					<div class="card-reveal">
+					  <span class="card-title grey-text text-darken-4">Hotel<i class="material-icons right">close</i></span>
+					  <p>Sistem booking hotel ini dibangun dengan mencoba membuat mini-framework sendiri dengan ide dari laravel dan mencoba membuat artisan versi bahasa sunda.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">			
+				<div class="card col m5 s12 hoverable">
+					<div class="card-image waves-effect waves-block waves-light">
+					  <a href="assets/images/petty_cash.png" target="_blank"><img src="assets/images/petty_cash.png"></a>
+					</div>
+					<div class="card-content">
+					  <span class="card-title activator grey-text text-darken-4">Petty Cash<i class="material-icons right">more_vert</i></span>
+					  <p><a href="http://pettycash.arkamaya.net/" target="_blank">Check the website</a></p>
+					</div>
+					<div class="card-reveal">
+					  <span class="card-title grey-text text-darken-4">Petty Cash<i class="material-icons right">close</i></span>
+					  <p>Sistem Petty Cash yang saya bangun ini menggunakan framework CodeIgniter. dan saat ini digunakan oleh PT. Arkamaya</p></p>
+					</div>
+				</div>
+				<div class="col m2"></div>
+				<div class="card col m5 s12 hoverable">
+					<div class="card-image waves-effect waves-block waves-light">
+					  <a href="assets/images/retail.png" target="_blank"><img src="assets/images/retail.png"></a>
+					</div>
+					<div class="card-content">
+					  <span class="card-title activator grey-text text-darken-4">Retail<i class="material-icons right">more_vert</i></span>
+					  <p><a href="javascript:;" target="_blank">Check the website</a></p>
+					</div>
+					<div class="card-reveal">
+					  <span class="card-title grey-text text-darken-4">Retail<i class="material-icons right">close</i></span>
+					  <p>Sistem Retail yang saya bangun ini menggunakan framework CodeIgniter. dengan feature yang melimpah, dan dikerjakan saat pkl / magang di PT. Arkamaya</p></p>
+					</div>
+				</div>
+			</div>
+			<div class="row">				
+				<div class="card col s5 hoverable">
+					<div class="card-image waves-effect waves-block waves-light">
+					  <a href="assets/images/ticketing.png" target="_blank"><img src="assets/images/ticketing.png"></a>
+					</div>
+					<div class="card-content">
+					  <span class="card-title activator grey-text text-darken-4">Ticketing<i class="material-icons right">more_vert</i></span>
+					  <p><a href="javascript:;" target="_blank">Check the website</a></p>
+					</div>
+					<div class="card-reveal">
+					  <span class="card-title grey-text text-darken-4">ticketing<i class="material-icons right">close</i></span>
+					  <p>Aplikasi ini dibangun dengan menggunakan laravel framework saat ujian kompetensi nasional</p></p>
+					</div>
+				</div>
+				<div class="col m2"></div>
+				<div class="card col m5 s12 hoverable">
+					<div class="card-image waves-effect waves-block waves-light">
+					  <a href="assets/images/pengolah_nilai.png" target="_blank"><img src="assets/images/pengolah_nilai.png"></a>
+					</div>
+					<div class="card-content">
+					  <span class="card-title activator grey-text text-darken-4">Pengolah Nilai<i class="material-icons right">more_vert</i></span>
+					  <p><a href="javascript:;" target="_blank">Check the website</a></p>
+					</div>
+					<div class="card-reveal">
+					  <span class="card-title grey-text text-darken-4">Pengolah Nilai<i class="material-icons right">close</i></span>
+					  <p>Sistem pengolah nilai ini di bangun dengan framework CodeIgniter</p></p>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	
+	<footer class="page-footer grey darken-2">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="white-text">Footer Content</h5>
+					<p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+				</div>
+				<div class="col l4 offset-l2 s12">
+					<h5 class="white-text">Links</h5>
+					<ul>
+						<li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+						<li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+						<li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+						<li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+					</ul>
+				</div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+			<div class="container">
+				© 2014 Copyright Text
+				<a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+		</div>
+    </footer>
+	
 	<script>
 		$(document).ready(function(){
+			var screen_height = $(window).height();
+			console.log(screen_height);
+			$('.carousel').css('height', screen_height - $('nav').height());
+			$('#typewriter').css('bottom', screen_height - 200);
 			$('.carousel').carousel({
 				fullWidth : true,
 			});
