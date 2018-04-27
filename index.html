@@ -58,16 +58,18 @@
 }
 </style>
 <body class="grey lighten-1">
-	<nav class="grey darken-2">
-		<div class="nav-wrapper">
-			<a href="javascript:;" class="brand-logo hide-on-med-and-down">Logo</a>
-			<ul class="right">
-				<li><a href="javascript:;">About</a></li>
-				<li><a href="javascript:;">About</a></li>
-				<li><a href="javascript:;">About</a></li>
-			</ul>
-		</div>
-	</nav>
+	<div style="height : 0;" class="navbar-fixed">	
+		<nav class="transparent">
+			<div class="nav-wrapper">
+				<a href="javascript:;" class="brand-logo hide-on-med-and-down"><img style="width : 50px; height : 50px;" src="assets/images/logo.png" alt=""></a>
+				<ul class="right">
+					<li><a href="#about" class="navsmooth">About Me</a></li>
+					<li><a href="#skills" class="navsmooth">Skills</a></li>
+					<li><a href="#portofolio" class="navsmooth">Portofolio</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
 	
 	<div class="carousel carousel-slider">
 		<a class="carousel-item" href="javascript:;"><img src="assets/images/bg1.png"></a>
@@ -81,8 +83,8 @@
 	</div>
 	<br>
 	<br>
-	<div class="container">
-		<div style="padding : 20px" class="row hoverable">
+	<div class="container" id="start_change">
+		<div id="about" style="padding : 20px" class="row hoverable">
 			<blockquote class="col s12">
 				<h2>About Me</h2>
 			</blockquote>
@@ -90,7 +92,7 @@
 				Siswa SMK Jurusan RPL, hobi koding. Saya senang belajar hal hal baru khususnya di dunia web, tapi tidak menutup kemungkinan untuk mendalami dunia mobile juga
 			</h6>
 		</div>
-		<div style="padding : 20px" class="row hoverable">
+		<div id="skills" style="padding : 20px" class="row hoverable">
 			<blockquote class="col s12">
 				<h2>Skills</h2>
 			</blockquote>
@@ -117,7 +119,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="row hoverable">
+		<div id="portofolio" class="row hoverable">
 			<blockquote class="col s12">
 				<h2>Portofolio</h2>
 			</blockquote>
@@ -180,7 +182,7 @@
 				</div>
 			</div>
 			<div class="row">				
-				<div class="card col s5 hoverable">
+				<div class="card col m5 s12 hoverable">
 					<div class="card-image waves-effect waves-block waves-light">
 					  <a href="assets/images/ticketing.PNG" target="_blank"><img src="assets/images/ticketing.PNG"></a>
 					</div>
@@ -215,34 +217,73 @@
 		<div class="container">
 			<div class="row">
 				<div class="col l6 s12">
-					<h5 class="white-text">Footer Content</h5>
-					<p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+					<h5 class="white-text">Moto</h5>
+					<p class="grey-text text-lighten-4">Be the bes you can be.</p>
 				</div>
 				<div class="col l4 offset-l2 s12">
-					<h5 class="white-text">Links</h5>
-					<ul>
-						<li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-						<li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-						<li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-						<li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+					<h5 class="white-text">Social Media</h5>
+					<ul class="row">
+						<li class="col s4"><a class="grey-text text-lighten-3" target="_blank" href="https://github.com/sukmaw"><img style="width : 50px; height : 50px" src="assets/images/github.png" alt=""></a></li>
+						<li class="col s4"><a class="grey-text text-lighten-3" target="_blank" href="https://gitlab.com/luthfi554"><img style="width : 50px; height : 50px" src="assets/images/gitlab.png" alt=""></a></li>
+						<li class="col s4"><a class="grey-text text-lighten-3" target="_blank" href="https://www.instagram.com/luthfi554/"><img style="width : 50px; height : 50px" src="assets/images/instagram.png" alt=""></a></li>
 					</ul>
 				</div>
             </div>
         </div>
         <div class="footer-copyright">
 			<div class="container">
-				© 2014 Copyright Text
-				<a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+				© 2018 Copyright 
+				<a class="grey-text text-lighten-4 right" href="javascript:;"><img src="assets/images/gmail.png" style="width : 20px; height : 20px" class="left" alt="">luthfi552@gmail.com</a>
             </div>
 		</div>
     </footer>
 	
 	<script>
 		$(document).ready(function(){
-			var screen_height = $(window).height();
-			console.log(screen_height);
-			$('.carousel').css('height', screen_height - $('nav').height());
-			$('#typewriter').css('bottom', screen_height - 200);
+			var screen_height = $(document).height() / 3.7;
+			
+			$(document).scroll(function(){
+				scroll_start = $(this).scrollTop();
+				var about = $('#about').offset().top - 20;
+				var skills = $("#skills").offset().top - 20;
+				var portofolio = $("#portofolio").offset().top - 20;
+				if(scroll_start >= about && scroll_start <= skills && scroll_start <= portofolio){
+					$('.nav-wrapper .active').removeClass('active');
+					$('.nav-wrapper li:eq(0)').addClass('active');
+				}else if(scroll_start >= skills && scroll_start <= portofolio){
+					$('.nav-wrapper .active').removeClass('active');
+					$('.nav-wrapper li:eq(1)').addClass('active');
+				}else if(scroll_start >= portofolio){
+					$('.nav-wrapper .active').removeClass('active');
+					$('.nav-wrapper li:eq(2)').addClass('active');
+				
+				}else{
+					$('.nav-wrapper .active').removeClass('active');
+					
+				}
+				if(scroll_start > $('#start_change').offset().top - 100) {
+					$('.nav-wrapper').addClass('grey darken-2');
+					$('.nav-wrapper').removeClass('transparent');
+				} else {
+					$('.nav-wrapper').addClass('transparent');
+					$('.nav-wrapper').removeClass('grey darken-2');
+				}
+			});
+			
+			$(".navsmooth").on('click', function(event) {
+				if(this.hash !== ""){
+					event.preventDefault();
+					var hash = this.hash;
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 800, function(){
+						window.location.hash = hash;
+					});
+				}
+			});
+			
+			$('.carousel').css('height', screen_height);
+			$('#typewriter').css('bottom', screen_height - 250);
 			$('.carousel').carousel({
 				fullWidth : true,
 			});
