@@ -1,0 +1,22 @@
+body {
+	min-height : 200vh;
+}
+.logo {
+	font-weight : 300;
+	padding-left : 10px;
+}
+.thin-text {
+	font-weight : 300;
+	background : #01579b;
+	padding : 20px;
+	border-radius : 10px;
+}
+
+.brand-logo {
+	min-width : 300px;
+}
+
+.skills-logo {
+	width : 75px; 
+	height : 75px;
+}

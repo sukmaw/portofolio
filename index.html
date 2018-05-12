@@ -1,309 +1,300 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<title>Portofolio</title>
+<!DOCTYPE html>
+<html>
+    <head>
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="assets/materialize/css/materialize.min.css"  media="screen,projection"/>
+		<link rel="stylesheet" href="assets/materialize/css/material-icons.css">
+		<link type="text/css" rel="stylesheet" href="assets/css/styles.css"  media="screen,projection"/>
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Portofolio</title>
+    </head>
+
+    <body>
 	
-	<link rel="stylesheet" href="assets/materialize/css/materialize.min.css">
-	<link rel="stylesheet" href="assets/materialize/css/material-icons.css">
-	<script src="assets/js/jquery.js"></script>
-	<script src="assets/js/typewriter.js"></script>
-	<script src="assets/materialize/js/materialize.min.js"></script>
-</head>
-<style>
-.carousel-item img {
-	height : 100%;
-}
-.skillbar {
-    position: relative;
-    display: block;
-    width: 100%;
-    margin-bottom: 30px;
-}
-
-.skillbar-bar:before {
-    background: #eee;
-    content: "";
-    height: 3px;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-}
-
-.skillbar-bar {
-    height: 3px;
-    width: 0px;
-    background: #323232;
-    transition-property: width, background-color;
-}
-
-.skillbar-title {
-    color: #323232;
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    display: inline-block;
-}
-
-.skill-bar-percent {
-    float: right;
-    display: inline-block;
-    color: #323232;
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-.card-image{
-	height : 200px;
-}
-</style>
-<body class="grey lighten-1">
-	<div style="height : 0;" class="navbar-fixed">	
-		<nav class="transparent">
-			<div class="nav-wrapper">
-				<a href="javascript:;" class="brand-logo hide-on-med-and-down"><img style="width : 50px; height : 50px;" src="assets/images/logo.png" alt=""></a>
-				<ul class="right">
-					<li><a href="#about" class="navsmooth">About Me</a></li>
-					<li><a href="#skills" class="navsmooth">Skills</a></li>
-					<li><a href="#portofolio" class="navsmooth">Portofolio</a></li>
-				</ul>
-			</div>
-		</nav>
-	</div>
-	
-	<div class="carousel carousel-slider">
-		<a class="carousel-item" href="javascript:;"><img src="assets/images/bg1.png"></a>
-		<div id="typewriter" class="carousel-fixed-item center">
-			<h4 class="white-text">Be The Best You Can Be</h4>
-			<h5 class="white-text" id="profile"></h5>
-		</div>
-		<div class="carousel-fixed-item center">
-			<a href="https://imgur.com/download/CkbAA4n" class="btn waves-effect waves-light">Download CV</a>
-		</div>
-	</div>
-	<br>
-	<br>
-	<div class="container" id="start_change">
-		<div id="about" style="padding : 20px" class="row hoverable">
-			<blockquote class="col s12">
-				<h2>About Me</h2>
-			</blockquote>
-			<h6 class="col s12 center">
-				Siswa SMK Jurusan RPL, hobi koding. Saya senang belajar hal hal baru khususnya di dunia web, tapi tidak menutup kemungkinan untuk mendalami dunia mobile juga
-			</h6>
-		</div>
-		<div id="skills" style="padding : 20px" class="row hoverable">
-			<blockquote class="col s12">
-				<h2>Skills</h2>
-			</blockquote>
-			<div class="col s12">
-				<div class="skillbar" data-percent="85%">
-					<div class="skillbar-title">PHP</div>
-					<div class="skill-bar-percent">85%</div>
-					<div class="skillbar-bar" style="width: 85%;"></div>
-				</div>
-				<div class="skillbar" data-percent="82%">
-					<div class="skillbar-title">Laravel</div>
-					<div class="skill-bar-percent">82%</div>
-					<div class="skillbar-bar" style="width: 82%;"></div>
-				</div>
-				<div class="skillbar" data-percent="79%">
-					<div class="skillbar-title">CodeIgniter</div>
-					<div class="skill-bar-percent">79%</div>
-					<div class="skillbar-bar" style="width: 79%;"></div>
-				</div>
-				<div class="skillbar" data-percent="75%">
-					<div class="skillbar-title">Materializecss</div>
-					<div class="skill-bar-percent">75%</div>
-					<div class="skillbar-bar" style="width: 75%;"></div>
-				</div>
-			</div>
-		</div>
-		<div id="portofolio" class="row hoverable">
-			<blockquote class="col s12">
-				<h2>Portofolio</h2>
-			</blockquote>
-			<div class="row">			
-				<div class="card col m5 s12 hoverable">
-					<div class="card-image waves-effect waves-block waves-light">
-					  <a href="assets/images/absensi.PNG" target="_blank"><img src="assets/images/absensi.PNG"></a>
-					</div>
-					<div class="card-content">
-					  <span class="card-title activator grey-text text-darken-4">Absensi<i class="material-icons right">more_vert</i></span>
-					  <p><a href="https://sistem-absensi.000webhostapp.com/" target="_blank">Check the website</a></p>
-					</div>
-					<div class="card-reveal">
-					  <span class="card-title grey-text text-darken-4">Sistem Absensi<i class="material-icons right">close</i></span>
-					  <p>Sistem absensi ini dibangun menggunakan framework laravel dengan custom user authentication yang bisa membuat role sesuai super admin / pemegang porgram.</p>
-					</div>
-				</div>
-				<div class="col m2"></div>
-				<div  class="card col m5 s12 hoverable">
-					<div class="card-image waves-effect waves-block waves-light">
-					  <a href="assets/images/hotel.PNG" target="_blank"><img src="assets/images/hotel.PNG"></a>
-					</div>
-					<div class="card-content">
-					  <span class="card-title activator grey-text text-darken-4">Hotel<i class="material-icons right">more_vert</i></span>
-					  <p><a href="https://hotel-qu-boss.000webhostapp.com/" target="_blank">Check the website</a></p>
-					</div>
-					<div class="card-reveal">
-					  <span class="card-title grey-text text-darken-4">Hotel<i class="material-icons right">close</i></span>
-					  <p>Sistem booking hotel ini dibangun dengan mencoba membuat mini-framework sendiri dengan ide dari laravel dan mencoba membuat artisan versi bahasa sunda.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">			
-				<div class="card col m5 s12 hoverable">
-					<div class="card-image waves-effect waves-block waves-light">
-					  <a href="assets/images/petty_cash.PNG" target="_blank"><img src="assets/images/petty_cash.PNG"></a>
-					</div>
-					<div class="card-content">
-					  <span class="card-title activator grey-text text-darken-4">Petty Cash<i class="material-icons right">more_vert</i></span>
-					  <p><a href="http://pettycash.arkamaya.net/" target="_blank">Check the website</a></p>
-					</div>
-					<div class="card-reveal">
-					  <span class="card-title grey-text text-darken-4">Petty Cash<i class="material-icons right">close</i></span>
-					  <p>Sistem Petty Cash yang saya bangun ini menggunakan framework CodeIgniter. dan saat ini digunakan oleh PT. Arkamaya</p></p>
-					</div>
-				</div>
-				<div class="col m2"></div>
-				<div class="card col m5 s12 hoverable">
-					<div class="card-image waves-effect waves-block waves-light">
-					  <a href="assets/images/retail.PNG" target="_blank"><img src="assets/images/retail.PNG"></a>
-					</div>
-					<div class="card-content">
-					  <span class="card-title activator grey-text text-darken-4">Retail<i class="material-icons right">more_vert</i></span>
-					  <p><a href="javascript:;" target="_blank">Check the website</a></p>
-					</div>
-					<div class="card-reveal">
-					  <span class="card-title grey-text text-darken-4">Retail<i class="material-icons right">close</i></span>
-					  <p>Sistem Retail yang saya bangun ini menggunakan framework CodeIgniter. dengan feature yang melimpah, dan dikerjakan saat pkl / magang di PT. Arkamaya</p></p>
-					</div>
-				</div>
-			</div>
-			<div class="row">				
-				<div class="card col m5 s12 hoverable">
-					<div class="card-image waves-effect waves-block waves-light">
-					  <a href="assets/images/ticketing.PNG" target="_blank"><img src="assets/images/ticketing.PNG"></a>
-					</div>
-					<div class="card-content">
-					  <span class="card-title activator grey-text text-darken-4">Ticketing<i class="material-icons right">more_vert</i></span>
-					  <p><a href="javascript:;" target="_blank">Check the website</a></p>
-					</div>
-					<div class="card-reveal">
-					  <span class="card-title grey-text text-darken-4">ticketing<i class="material-icons right">close</i></span>
-					  <p>Aplikasi ini dibangun dengan menggunakan laravel framework saat ujian kompetensi nasional</p></p>
-					</div>
-				</div>
-				<div class="col m2"></div>
-				<div class="card col m5 s12 hoverable">
-					<div class="card-image waves-effect waves-block waves-light">
-					  <a href="assets/images/pengolah_nilai.PNG" target="_blank"><img src="assets/images/pengolah_nilai.PNG"></a>
-					</div>
-					<div class="card-content">
-					  <span class="card-title activator grey-text text-darken-4">Pengolah Nilai<i class="material-icons right">more_vert</i></span>
-					  <p><a href="javascript:;" target="_blank">Check the website</a></p>
-					</div>
-					<div class="card-reveal">
-					  <span class="card-title grey-text text-darken-4">Pengolah Nilai<i class="material-icons right">close</i></span>
-					  <p>Sistem pengolah nilai ini di bangun dengan framework CodeIgniter</p></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<footer class="page-footer grey darken-2">
-		<div class="container">
-			<div class="row">
-				<div class="col l6 s12">
-					<h5 class="white-text">Moto</h5>
-					<p class="grey-text text-lighten-4">Be the best you can be.</p>
-				</div>
-				<div class="col l4 offset-l2 s12">
-					<h5 class="white-text">Social Media</h5>
-					<ul class="row">
-						<li class="col s4"><a class="grey-text text-lighten-3" target="_blank" href="https://github.com/sukmaw"><img style="width : 50px; height : 50px" src="assets/images/github.png" alt=""></a></li>
-						<li class="col s4"><a class="grey-text text-lighten-3" target="_blank" href="https://gitlab.com/luthfi554"><img style="width : 50px; height : 50px" src="assets/images/gitlab.png" alt=""></a></li>
-						<li class="col s4"><a class="grey-text text-lighten-3" target="_blank" href="https://www.instagram.com/luthfi554/"><img style="width : 50px; height : 50px" src="assets/images/instagram.png" alt=""></a></li>
+		<!-- Navbar section -->
+		<div class="navbar-fixed">		
+			<nav>
+				<div class="nav-wrapper blue-grey darken-2">
+					<a href="#!"class="brand-logo" ><span class="logo grey-text text-lighten-2" >Luthfi - Web Developer</span></a>
+					<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+					<ul class="right hide-on-med-and-down">
+						<li><a href="#skills" class="navsmooth">Skills</a></li>
+						<li><a href="#about" class="navsmooth">About</a></li>
+						<li><a href="#work" class="navsmooth">Work</a></li>
+						<li><a href="#contact" class="navsmooth">Contact</a></li>
 					</ul>
 				</div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-			<div class="container">
-				© 2018 Copyright 
-				<a class="grey-text text-lighten-4 right" href="javascript:;"><img src="assets/images/gmail.png" style="width : 20px; height : 20px" class="left" alt="">luthfi552@gmail.com</a>
-            </div>
+			</nav>
 		</div>
-    </footer>
-	
-	<script>
-		$(document).ready(function(){
-			var screen_height = $(document).height() / 3.7;
-			
-			$(document).scroll(function(){
-				scroll_start = $(this).scrollTop();
-				var about = $('#about').offset().top - 20;
-				var skills = $("#skills").offset().top - 20;
-				var portofolio = $("#portofolio").offset().top - 20;
-				if(scroll_start >= about && scroll_start <= skills && scroll_start <= portofolio){
-					$('.nav-wrapper .active').removeClass('active');
-					$('.nav-wrapper li:eq(0)').addClass('active');
-				}else if(scroll_start >= skills && scroll_start <= portofolio){
-					$('.nav-wrapper .active').removeClass('active');
-					$('.nav-wrapper li:eq(1)').addClass('active');
-				}else if(scroll_start >= portofolio){
-					$('.nav-wrapper .active').removeClass('active');
-					$('.nav-wrapper li:eq(2)').addClass('active');
-				
-				}else{
-					$('.nav-wrapper .active').removeClass('active');
-					
-				}
-				if(scroll_start > $('#start_change').offset().top - 100) {
-					$('.nav-wrapper').addClass('grey darken-2');
-					$('.nav-wrapper').removeClass('transparent');
-				} else {
-					$('.nav-wrapper').addClass('transparent');
-					$('.nav-wrapper').removeClass('grey darken-2');
-				}
-			});
-			
-			$(".navsmooth").on('click', function(event) {
-				if(this.hash !== ""){
-					event.preventDefault();
-					var hash = this.hash;
-					$('html, body').animate({
-						scrollTop: $(hash).offset().top
-					}, 800, function(){
-						window.location.hash = hash;
-					});
-				}
-			});
-			
-			$('.carousel').css('height', screen_height);
-			$('#typewriter').css('bottom', screen_height - 250);
-			$('.carousel').carousel({
-				fullWidth : true,
-			});
-			var app = document.getElementById('profile');
-
-			var typewriter = new Typewriter(app, {
-				loop: true
-			});
-
-			typewriter.typeString('Hai, My Name Is Luthfi!')
-				.pauseFor(1000)
-				.deleteAll()
-				.typeString('I want to be a back-end developer')
-				.pauseFor(1000)
-				.deleteAll()
-				.typeString('WELCOME!')
-				.pauseFor(3000)
-				.start();
-		});
-	</script>
-</body>
-</html>
+		<ul class="sidenav" id="mobile-demo">
+			<li><a href="#skills" class="navsmooth">Skills</a></li>
+			<li><a href="#about" class="navsmooth">About</a></li>
+			<li><a href="#work" class="navsmooth">Work</a></li>
+			<li><a href="#contact" class="navsmooth">Contact</a></li>
+		</ul>
+		
+		<div class="parallax-container valign-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col l8 s12 white-text">
+						<h4 class="thin-text left-alighn light-blue-text accent-4 valign">Saya luthfi, Seorang web developer asal Bandung</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col l4">
+						<a href="https://imgur.com/download/CkbAA4n" target="_blank" class="waves-effect waves-light btn hoverable">Download Cv</a>
+					</div>
+				</div>
+			</div>
+			<div class="parallax"><img src="assets/images/pl1.jpeg"></div>
+		</div>
+		
+		<!--  Skills -->
+		<div class="container" id="skills">
+			<div class="row">
+				<h2>Skills</h2>
+			</div>
+			<div class="row">
+				<div class="col l6 s12">				
+					<div class="card light-blue accent-4 z-depth-3">
+						<div class="card-content white-text">
+							<h3 class="center-align"><img class="skills-logo" src="assets/images/laravel-logo.png" alt=""></h3>
+							<div class="divider"></div>
+							<span class="card-title">Laravel</span>
+							<p>
+								Saya telah belajar laravel selama kurang lebih satu tahun, dan telah mengerjakan beberapa project mennggunakan laravel. Mungkin bukan ahlinya tapi insya allah saya akan melakukan yang terbaik
+							</p>
+						</div>
+						<div class="card-action">
+							<a href="https://laravel.com/">Check The Web</a>
+						</div>
+					</div>
+				</div>
+				<div class="col l6 s12">				
+					<div class="card light-blue accent-4 z-depth-3">
+						<div class="card-content white-text">
+							<h3 class="center-align"><img class="skills-logo" src="assets/images/codeigniter-logo.png" alt=""></h3>
+							<div class="divider"></div>
+							<span class="card-title">CodeIgniter</span>
+							<p>
+								Saya telah menggunakan CodeIgniter dalam project kurang lebih 2 tahun, dan telah mengerjakan beberapa project mennggunakan CodeIgniter. dan insya allah saya akan melakukan yang terbaik
+							</p>
+						</div>
+						<div class="card-action">
+							<a href="https://codeigniter.com/">Check The Web</a>
+						</div>
+					</div>
+				</div>
+				<div class="col l6 s12">				
+					<div class="card light-blue accent-4 z-depth-3">
+						<div class="card-content white-text">
+							<h3 class="center-align"><img class="skills-logo" src="assets/images/materializecss-logo.png" alt=""></h3>
+							<div class="divider"></div>
+							<span class="card-title">Materializecss</span>
+							<p>
+								Saya telah menggunakan Materializecss dalam project kurang lebih 2/3 tahun, dan insya allah saya sudah faham betul cara menggunakannya
+							</p>
+						</div>
+						<div class="card-action">
+							<a href="https://vuejs.org/">Check The Web</a>
+						</div>
+					</div>
+				</div>
+				<div class="col l6 s12">				
+					<div class="card light-blue accent-4 z-depth-3">
+						<div class="card-content white-text">
+							<h3 class="center-align"><img class="skills-logo" src="assets/images/vuejs-logo.png" alt=""></h3>
+							<div class="divider"></div>
+							<span class="card-title">VueJs</span>
+							<p>
+								Untuk VueJs ini saya baru mempelajarinya beberapa bulan, jadi belum begitu mahir. tapi saya akan berusaha untuk terus berlatih
+							</p>
+						</div>
+						<div class="card-action">
+							<a href="https://laravel.com/">Check The Web</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- About -->
+		<div class="parallax-container valign-wrapper" id="about">
+			<div class="container" style="margin-top : 40px;">
+				<div class="row center">
+					<div class="col l10 offset-l1 valign">
+						<img style="width : 175px; height : 175px;" class="center circle" src="assets/images/pp.jpeg" alt="">
+						<h5 style="font-size : 1.6rem;" class="center thin-text">
+							Hai, Perkenalkan saya Luthfi Sukmawardhani. Seorang web developer asal Bandung kelahiran tahun 2000. Saya sudah mulai menekuni dunia programming kurang lebih tiga tahun, dan saat ini saya baru lulus dari SMKN 1 Katapang Jurusan Rekayasa Perangkat Lunak 
+						</h5>
+					</div>
+					<p></p>
+				</div>
+			</div>
+			<div class="parallax"><img src="assets/images/pl2.jpg"></div>
+		</div>
+		
+		<!-- Work -->
+		<div class="container" id="work">
+			<h2 class="section-header">Selected Works</h2>
+			<div class="row">
+				<div class="col l4 m8 offset-m2 s12">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+							<a href="assets/images/absensi.PNG" target="_blank"><img src="assets/images/absensi.PNG"></a>
+						</div>
+						<div class="card-content">
+							<span class="card-title activator grey-text text-darken-4">Absensi<i class="material-icons right">more_vert</i></span>
+							<p><a href="https://sistem-absensi.000webhostapp.com/" target="_blank">Check the website</a></p>
+						</div>
+						<div class="card-reveal">
+							<span class="card-title grey-text text-darken-4">Sistem Absensi<i class="material-icons right">close</i></span>
+							<p>Sistem absensi ini dibangun menggunakan framework laravel dengan custom user authentication yang bisa membuat role sesuai super admin / pemegang porgram.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col l4 m8 offset-m2 s12">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+						  <a href="assets/images/hotel.PNG" target="_blank"><img src="assets/images/hotel.PNG"></a>
+						</div>
+						<div class="card-content">
+						  <span class="card-title activator grey-text text-darken-4">Hotel<i class="material-icons right">more_vert</i></span>
+						  <p><a href="https://hotel-qu-boss.000webhostapp.com/" target="_blank">Check the website</a></p>
+						</div>
+						<div class="card-reveal">
+						  <span class="card-title grey-text text-darken-4">Hotel<i class="material-icons right">close</i></span>
+						  <p>Sistem booking hotel ini dibangun dengan mencoba membuat mini-framework sendiri dengan ide dari laravel dan mencoba membuat artisan versi bahasa sunda.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col l4 m8 offset-m2 s12">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+						  <a href="assets/images/petty_cash.PNG" target="_blank"><img src="assets/images/petty_cash.PNG"></a>
+						</div>
+						<div class="card-content">
+						  <span class="card-title activator grey-text text-darken-4">Petty Cash<i class="material-icons right">more_vert</i></span>
+						  <p><a href="http://pettycash.arkamaya.net/" target="_blank">Check the website</a></p>
+						</div>
+						<div class="card-reveal">
+						  <span class="card-title grey-text text-darken-4">Petty Cash<i class="material-icons right">close</i></span>
+						  <p>Sistem Petty Cash yang saya bangun ini menggunakan framework CodeIgniter. dan saat ini digunakan oleh PT. Arkamaya</p></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col l4 m8 offset-m2 s12">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+						  <a href="assets/images/retail.PNG" target="_blank"><img src="assets/images/retail.PNG"></a>
+						</div>
+						<div class="card-content">
+						  <span class="card-title activator grey-text text-darken-4">Retail<i class="material-icons right">more_vert</i></span>
+						  <p><a href="javascript:;" target="_blank">Check the website</a></p>
+						</div>
+						<div class="card-reveal">
+						  <span class="card-title grey-text text-darken-4">Retail<i class="material-icons right">close</i></span>
+						  <p>Sistem Retail yang saya bangun ini menggunakan framework CodeIgniter. dengan feature yang melimpah, dan dikerjakan saat pkl / magang di PT. Arkamaya</p></p>
+						</div>
+					</div>
+				</div>
+				<div class="col l4 m8 offset-m2 s12">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+						  <a href="assets/images/ticketing.PNG" target="_blank"><img src="assets/images/ticketing.PNG"></a>
+						</div>
+						<div class="card-content">
+						  <span class="card-title activator grey-text text-darken-4">Ticketing<i class="material-icons right">more_vert</i></span>
+						  <p><a href="javascript:;" target="_blank">Check the website</a></p>
+						</div>
+						<div class="card-reveal">
+						  <span class="card-title grey-text text-darken-4">ticketing<i class="material-icons right">close</i></span>
+						  <p>Aplikasi ini dibangun dengan menggunakan laravel framework saat ujian kompetensi nasional</p></p>
+						</div>
+					</div>
+				</div>
+				<div class="col l4 m8 offset-m2 s12">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+						  <a href="assets/images/pengolah_nilai.PNG" target="_blank"><img src="assets/images/pengolah_nilai.PNG"></a>
+						</div>
+						<div class="card-content">
+						  <span class="card-title activator grey-text text-darken-4">Pengolah Nilai<i class="material-icons right">more_vert</i></span>
+						  <p><a href="javascript:;" target="_blank">Check the website</a></p>
+						</div>
+						<div class="card-reveal">
+						  <span class="card-title grey-text text-darken-4">Pengolah Nilai<i class="material-icons right">close</i></span>
+						  <p>Sistem pengolah nilai ini di bangun dengan framework CodeIgniter</p></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Contact -->
+		
+		<div class="container" id="contact">
+			<div class="section-header">
+				<h2>Contact Me</h2>
+			</div>
+			<div class="row">
+				<form class="col s12">
+					<div class="row">
+						<div class="input-field col s6">
+							<input placeholder="Firstname" id="first_name" type="text" >
+							<label for="first_name">First Name</label>
+						</div>
+						<div class="input-field col s6">
+							<input placeholder="Lastname" id="last_name" type="text" >
+							<label for="last_name">Last Name</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="email" type="email">
+							<label for="email">Email</label>
+						</div>
+					</div>
+					<button class="btn waves-effect waves-light right">Contact</button>
+				</form>
+			</div>
+		</div>
+		
+		<!-- Footer -->
+		
+		<footer class="page-footer blue-grey darken-2">
+			<div class="container">
+				<div class="row">
+					<div class="col l6 s12">
+						<h5 class="white-text">Moto</h5>
+						<p class="grey-text text-lighten-4">Be the best you can be.</p>
+					</div>
+					<div class="col l4 offset-l2 s12">
+						<h5 class="white-text">Social Media</h5>
+						<ul class="row">
+							<li class="col s4"><a class="grey-text text-lighten-3" target="_blank" href="https://github.com/sukmaw"><img style="width : 50px; height : 50px" src="assets/images/github.png" alt=""></a></li>
+							<li class="col s4"><a class="grey-text text-lighten-3" target="_blank" href="https://gitlab.com/luthfi554"><img style="width : 50px; height : 50px" src="assets/images/gitlab.png" alt=""></a></li>
+							<li class="col s4"><a class="grey-text text-lighten-3" target="_blank" href="https://www.instagram.com/luthfi554/"><img style="width : 50px; height : 50px" src="assets/images/instagram.png" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer-copyright">
+				<div class="container">
+					© 2018 Copyright 
+					<a class="grey-text text-lighten-4 right" href="javascript:;"><img src="assets/images/gmail.png" style="width : 20px; height : 20px" class="left" alt="">luthfi552@gmail.com</a>
+				</div>
+			</div>
+		</footer>
+		
+		<!--Import jQuery before materialize.js-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
+		<script type="text/javascript" src="assets/js/script.js"></script>
+    </body>
+</html>        

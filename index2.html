@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Portofolio</title>
+	
+	<link rel="stylesheet" href="assets/materialize/css/materialize.min.css">
+	<link rel="stylesheet" href="assets/materialize/css/material-icons.css">
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/typewriter.js"></script>
+	<script src="assets/materialize/js/materialize.min.js"></script>
+</head>
+<style>
+.carousel-item img {
+	height : 100%;
+}
+.skillbar {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.skillbar-bar:before {
+    background: #eee;
+    content: "";
+    height: 3px;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.skillbar-bar {
+    height: 3px;
+    width: 0px;
+    background: #323232;
+    transition-property: width, background-color;
+}
+
+.skillbar-title {
+    color: #323232;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.skill-bar-percent {
+    float: right;
+    display: inline-block;
+    color: #323232;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.card-image{
+	height : 200px;
+}
+</style>
+<body class="grey lighten-1">
+	<div style="height : 0;" class="navbar-fixed">	
+		<nav class="transparent">
+			<div class="nav-wrapper">
+				<a href="javascript:;" class="brand-logo hide-on-med-and-down"><img style="width : 50px; height : 50px;" src="assets/images/logo.png" alt=""></a>
+				<ul class="right">
+					<li><a href="#about" class="navsmooth">About Me</a></li>
+					<li><a href="#skills" class="navsmooth">Skills</a></li>
+					<li><a href="#portofolio" class="navsmooth">Portofolio</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	
+	<div class="carousel carousel-slider">
+		<a class="carousel-item" href="javascript:;"><img src="assets/images/bg1.png"></a>
+		<div id="typewriter" class="carousel-fixed-item center">
+			<h4 class="white-text">Be The Best You Can Be</h4>
+			<h5 class="white-text" id="profile"></h5>
+		</div>
+		<div class="carousel-fixed-item center">
+			<a href="https://imgur.com/download/CkbAA4n" class="btn waves-effect waves-light">Download CV</a>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="container" id="start_change">
+		<div id="about" style="padding : 20px" class="row hoverable">
+			<blockquote class="col s12">
+				<h2>About Me</h2>
+			</blockquote>
+			<h6 class="col s12 center">
+				Siswa SMK Jurusan RPL, hobi koding. Saya senang belajar hal hal baru khususnya di dunia web, tapi tidak menutup kemungkinan untuk mendalami dunia mobile juga
+			</h6>
+		</div>
+		<div id="skills" style="padding : 20px" class="row hoverable">
+			<blockquote class="col s12">
+				<h2>Skills</h2>
+			</blockquote>
+			<div class="col s12">
+				<div class="skillbar" data-percent="85%">
+					<div class="skillbar-title">PHP</div>
+					<div class="skill-bar-percent">85%</div>
+					<div class="skillbar-bar" style="width: 85%;"></div>
+				</div>
+				<div class="skillbar" data-percent="82%">
+					<div class="skillbar-title">Laravel</div>
+					<div class="skill-bar-percent">82%</div>
+					<div class="skillbar-bar" style="width: 82%;"></div>
+				</div>
+				<div class="skillbar" data-percent="79%">
+					<div class="skillbar-title">CodeIgniter</div>
+					<div class="skill-bar-percent">79%</div>
+					<div class="skillbar-bar" style="width: 79%;"></div>
+				</div>
+				<div class="skillbar" data-percent="75%">
+					<div class="skillbar-title">Materializecss</div>
+					<div class="skill-bar-percent">75%</div>
+					<div class="skillbar-bar" style="width: 75%;"></div>
+				</div>
+			</div>
+		</div>
+		<div id="portofolio" class="row hoverable">
+			<blockquote class="col s12">
+				<h2>Portofolio</h2>
+			</blockquote>
+			<div class="row">			
+				<div class="card col m5 s12 hoverable">
+					<div class="card-image waves-effect waves-block waves-light">
+					  <a href="assets/images/absensi.PNG" target="_blank"><img src="assets/images/absensi.PNG"></a>
+					</div>
+					<div class="card-content">
+					  <span class="card-title activator grey-text text-darken-4">Absensi<i class="material-icons right">more_vert</i></span>
+					  <p><a href="https://sistem-absensi.000webhostapp.com/" target="_blank">Check the website</a></p>
+					</div>
+					<div class="card-reveal">
+					  <span class="card-title grey-text text-darken-4">Sistem Absensi<i class="material-icons right">close</i></span>
+					  <p>Sistem absensi ini dibangun menggunakan framework laravel dengan custom user authentication yang bisa membuat role sesuai super admin / pemegang porgram.</p>
+					</div>
+				</div>
+				<div class="col m2"></div>
+				<div  class="card col m5 s12 hoverable">
+					<div class="card-image waves-effect waves-block waves-light">
+					  <a href="assets/images/hotel.PNG" target="_blank"><img src="assets/images/hotel.PNG"></a>
+					</div>
+					<div class="card-content">
+					  <span class="card-title activator grey-text text-darken-4">Hotel<i class="material-icons right">more_vert</i></span>
+					  <p><a href="https://hotel-qu-boss.000webhostapp.com/" target="_blank">Check the website</a></p>
+					</div>
+					<div class="card-reveal">
+					  <span class="card-title grey-text text-darken-4">Hotel<i class="material-icons right">close</i></span>
+					  <p>Sistem booking hotel ini dibangun dengan mencoba membuat mini-framework sendiri dengan ide dari laravel dan mencoba membuat artisan versi bahasa sunda.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">			
+				<div class="card col m5 s12 hoverable">
+					<div class="card-image waves-effect waves-block waves-light">
+					  <a href="assets/images/petty_cash.PNG" target="_blank"><img src="assets/images/petty_cash.PNG"></a>
+					</div>
+					<div class="card-content">
+					  <span class="card-title activator grey-text text-darken-4">Petty Cash<i class="material-icons right">more_vert</i></span>
+					  <p><a href="http://pettycash.arkamaya.net/" target="_blank">Check the website</a></p>
+					</div>
+					<div class="card-reveal">
+					  <span class="card-title grey-text text-darken-4">Petty Cash<i class="material-icons right">close</i></span>
+					  <p>Sistem Petty Cash yang saya bangun ini menggunakan framework CodeIgniter. dan saat ini digunakan oleh PT. Arkamaya</p></p>
+					</div>
+				</div>
+				<div class="col m2"></div>
+				<div class="card col m5 s12 hoverable">
+					<div class="card-image waves-effect waves-block waves-light">
+					  <a href="assets/images/retail.PNG" target="_blank"><img src="assets/images/retail.PNG"></a>
+					</div>
+					<div class="card-content">
+					  <span class="card-title activator grey-text text-darken-4">Retail<i class="material-icons right">more_vert</i></span>
+					  <p><a href="javascript:;" target="_blank">Check the website</a></p>
+					</div>
+					<div class="card-reveal">
+					  <span class="card-title grey-text text-darken-4">Retail<i class="material-icons right">close</i></span>
+					  <p>Sistem Retail yang saya bangun ini menggunakan framework CodeIgniter. dengan feature yang melimpah, dan dikerjakan saat pkl / magang di PT. Arkamaya</p></p>
+					</div>
+				</div>
+			</div>
+			<div class="row">				
+				<div class="card col m5 s12 hoverable">
+					<div class="card-image waves-effect waves-block waves-light">
+					  <a href="assets/images/ticketing.PNG" target="_blank"><img src="assets/images/ticketing.PNG"></a>
+					</div>
+					<div class="card-content">
+					  <span class="card-title activator grey-text text-darken-4">Ticketing<i class="material-icons right">more_vert</i></span>
+					  <p><a href="javascript:;" target="_blank">Check the website</a></p>
+					</div>
+					<div class="card-reveal">
+					  <span class="card-title grey-text text-darken-4">ticketing<i class="material-icons right">close</i></span>
+					  <p>Aplikasi ini dibangun dengan menggunakan laravel framework saat ujian kompetensi nasional</p></p>
+					</div>
+				</div>
+				<div class="col m2"></div>
+				<div class="card col m5 s12 hoverable">
+					<div class="card-image waves-effect waves-block waves-light">
+					  <a href="assets/images/pengolah_nilai.PNG" target="_blank"><img src="assets/images/pengolah_nilai.PNG"></a>
+					</div>
+					<div class="card-content">
+					  <span class="card-title activator grey-text text-darken-4">Pengolah Nilai<i class="material-icons right">more_vert</i></span>
+					  <p><a href="javascript:;" target="_blank">Check the website</a></p>
+					</div>
+					<div class="card-reveal">
+					  <span class="card-title grey-text text-darken-4">Pengolah Nilai<i class="material-icons right">close</i></span>
+					  <p>Sistem pengolah nilai ini di bangun dengan framework CodeIgniter</p></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<footer class="page-footer grey darken-2">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="white-text">Moto</h5>
+					<p class="grey-text text-lighten-4">Be the best you can be.</p>
+				</div>
+				<div class="col l4 offset-l2 s12">
+					<h5 class="white-text">Social Media</h5>
+					<ul class="row">
+						<li class="col s4"><a class="grey-text text-lighten-3" target="_blank" href="https://github.com/sukmaw"><img style="width : 50px; height : 50px" src="assets/images/github.png" alt=""></a></li>
+						<li class="col s4"><a class="grey-text text-lighten-3" target="_blank" href="https://gitlab.com/luthfi554"><img style="width : 50px; height : 50px" src="assets/images/gitlab.png" alt=""></a></li>
+						<li class="col s4"><a class="grey-text text-lighten-3" target="_blank" href="https://www.instagram.com/luthfi554/"><img style="width : 50px; height : 50px" src="assets/images/instagram.png" alt=""></a></li>
+					</ul>
+				</div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+			<div class="container">
+				© 2018 Copyright 
+				<a class="grey-text text-lighten-4 right" href="javascript:;"><img src="assets/images/gmail.png" style="width : 20px; height : 20px" class="left" alt="">luthfi552@gmail.com</a>
+            </div>
+		</div>
+    </footer>
+	
+	<script>
+		$(document).ready(function(){
+			var screen_height = $(window).height();
+			
+			$(document).scroll(function(){
+				scroll_start = $(this).scrollTop();
+				var about = $('#about').offset().top - 20;
+				var skills = $("#skills").offset().top - 20;
+				var portofolio = $("#portofolio").offset().top - 20;
+				if(scroll_start >= about && scroll_start <= skills && scroll_start <= portofolio){
+					$('.nav-wrapper .active').removeClass('active');
+					$('.nav-wrapper li:eq(0)').addClass('active');
+				}else if(scroll_start >= skills && scroll_start <= portofolio){
+					$('.nav-wrapper .active').removeClass('active');
+					$('.nav-wrapper li:eq(1)').addClass('active');
+				}else if(scroll_start >= portofolio){
+					$('.nav-wrapper .active').removeClass('active');
+					$('.nav-wrapper li:eq(2)').addClass('active');
+				
+				}else{
+					$('.nav-wrapper .active').removeClass('active');
+					
+				}
+				if(scroll_start > $('#start_change').offset().top - 100) {
+					$('.nav-wrapper').addClass('grey darken-2');
+					$('.nav-wrapper').removeClass('transparent');
+				} else {
+					$('.nav-wrapper').addClass('transparent');
+					$('.nav-wrapper').removeClass('grey darken-2');
+				}
+			});
+			
+			$(".navsmooth").on('click', function(event) {
+				if(this.hash !== ""){
+					event.preventDefault();
+					var hash = this.hash;
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 800, function(){
+						window.location.hash = hash;
+					});
+				}
+			});
+			
+			$('.carousel').css('height', screen_height);
+			$('#typewriter').css('bottom', screen_height - 250);
+			$('.carousel').carousel({
+				fullWidth : true,
+			});
+			var app = document.getElementById('profile');
+
+			var typewriter = new Typewriter(app, {
+				loop: true
+			});
+
+			typewriter.typeString('Hai, My Name Is Luthfi!')
+				.pauseFor(1000)
+				.deleteAll()
+				.typeString('I want to be a back-end developer')
+				.pauseFor(1000)
+				.deleteAll()
+				.typeString('WELCOME!')
+				.pauseFor(3000)
+				.start();
+		});
+	</script>
+</body>
+</html>
