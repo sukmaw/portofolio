@@ -2,6 +2,8 @@ $(document).ready( function(){
 	$('.sidenav').sidenav();
 	$('.parallax').parallax();
 	
+	$('.main-loader').delay(2000).stop()
+	
 	// navsmooth
 	
 	$(".navsmooth").on('click', function(event) {
@@ -15,4 +17,5 @@ $(document).ready( function(){
 			});
 		}
 	});
+	
 } )

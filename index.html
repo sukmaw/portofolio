@@ -13,7 +13,28 @@
     </head>
 
     <body>
-	
+		
+		<!-- preloader -->
+
+		<div class="main main-loader">
+		  <div class="preloader-wrapper big active">
+			<div class="spinner-layer spinner-blue-only">
+			  <div class="circle-clipper left">
+				<div class="circle"></div>
+			  </div>
+			  <div class="gap-patch">
+				<div class="circle"></div>
+			  </div>
+			  <div class="circle-clipper right">
+				<div class="circle"></div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+
+		<!-- end preloader -->
+		
 		<!-- Navbar section -->
 		<div class="navbar-fixed">		
 			<nav>
@@ -292,6 +313,11 @@
 			</div>
 		</footer>
 		
+		<script>
+			document.addEventListener("DOMContentLoaded", function(){
+				$('.main-loader').delay(9999999).fadeOut('slow');
+			})
+		</script>
 		<!--Import jQuery before materialize.js-->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
